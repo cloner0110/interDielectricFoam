@@ -1,0 +1,32 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.0.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      electricalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+phases (phase1 phase2);
+// Droplet
+phase1
+{
+    sgm             sgm [-1 -3 3 0 0 2 0] 2.5;
+    eps             eps [-1 -3 4 0 0 2 0] 2;
+}
+// Ambient Fluid
+phase2
+{
+    sgm             sgm [-1 -3 3 0 0 2 0] 1;
+    eps             eps [-1 -3 4 0 0 2 0] 1;
+}
+
+
+// ************************************************************************* //
